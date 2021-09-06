@@ -10,6 +10,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+
       <header>
         <h1>Título/ Nombre de la app</h1>
         <section>
@@ -22,13 +23,11 @@ function App() {
             </form>
         </section>
     </header>
+
     <footer>
-        <ul class="team">
-            <li>Nombre integrante 1</li>
-            <li>Nombre integrante 2</li>
-            <li>Nombre integrante 3</li>
-        </ul>
+        <Footer />
     </footer>
+
     </div>
   );
 }

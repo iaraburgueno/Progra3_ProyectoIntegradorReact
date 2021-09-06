@@ -6,4 +6,4 @@ class Tarjetas extends Component {
 
 }
 
-export default Tarjetas
+export default Tarjetas;
