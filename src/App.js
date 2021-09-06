@@ -1,3 +1,9 @@
+import React from 'react';
+import Nav from './Componentes/Nav/Nav';
+import Footer from './Componentes/Footer/Footer';
+import Tarjetas from './Componentes/Tarjetas/Tarjetas';
+
+
 import logo from './logo.svg';
 import './App.css';
 
