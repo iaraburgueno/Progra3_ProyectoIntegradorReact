@@ -10,20 +10,25 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header>
+        <h1>Título/ Nombre de la app</h1>
+        <section>
+            <p>Ordenar ASC/ DESC</p>
+            <i class="fas fa-th"></i>
+            <i class="fas fa-align-justify"></i>
+            <form action="">
+                <input type="text" name="search" id="" placeholder="Search"></input>
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </section>
+    </header>
+    <footer>
+        <ul class="team">
+            <li>Nombre integrante 1</li>
+            <li>Nombre integrante 2</li>
+            <li>Nombre integrante 3</li>
+        </ul>
+    </footer>
     </div>
   );
 }
