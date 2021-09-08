@@ -4,7 +4,6 @@ import Footer from './Componentes/Footer/Footer';
 import Tarjetas from './Componentes/Tarjetas/Tarjetas';
 
 
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -23,6 +22,8 @@ function App() {
             </form>
         </section>
     </header>
+   
+    
 
     <footer>
         <Footer />
