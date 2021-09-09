@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import CardMovies from '../CardMovies/CardMovies';
 
 class Movies extends Component {
     constructor(){ // se setean los estados 
@@ -20,6 +21,12 @@ class Movies extends Component {
             })    
             .then((data) => {
                 console.log(data);
+                this.setState({
+                    foto: data.results.poster_path,
+                    titulo: data.results.title,
+                    descripcion: data.results.overview,
+                    extra: data.results
+                })
             
             })
             .catch(error => console.log(error))
@@ -29,7 +36,9 @@ class Movies extends Component {
         //console.log("Rendericé");
         return(
             <React.Fragment>
-            
+                {
+                    this.state.extra.map()
+                }
             </React.Fragment>
         )
     }
