@@ -13,9 +13,9 @@ class Tarjetas extends Component {
     }
     componentDidMount(){
         console.log("Cargado!");
-       // let url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=1';
+        let url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=1';
 
-        fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=1')
+        fetch(url)
             .then(respuesta => {
                 return respuesta.json()
             })    
