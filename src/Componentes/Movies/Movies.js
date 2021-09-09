@@ -5,10 +5,7 @@ class Movies extends Component {
     constructor(){ // se setean los estados 
         super();
         this.state = { // declaracion del estado inicial de esas propiedades que queremos trabajar de nuestros componentes. ES UN OBJ LITERAL.
-            foto: '',
-            titulo: '',
-            descripcion: '',
-            extra: [],
+            peliculas: []
         }
     }
     componentDidMount(){ // Metodo en donde puedo hacer mi fetch
@@ -22,10 +19,7 @@ class Movies extends Component {
             .then((data) => {
                 console.log(data);
                 this.setState({
-                    foto: data.results.poster_path,
-                    titulo: data.results.title,
-                    descripcion: data.results.overview,
-                    extra: data.results
+                    peliculas: data.results
                 })
             
             })
@@ -36,8 +30,17 @@ class Movies extends Component {
         //console.log("Rendericé");
         return(
             <React.Fragment>
+                <section className='buscador'>
+                            <p>Ordenar ASC/ DESC</p>
+                            <i className="fas fa-th"></i>
+                            <i className="fas fa-align-justify"></i>
+                            <form action="">
+                                <input type="text" name="search" id="" placeholder="Search"></input>
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </section>
                 {
-                    
+                    this.state.peliculas.map(pelicula => <CardMovies key={pelicula.id} pelicula={pelicula}/>)
                 }
             </React.Fragment>
         )

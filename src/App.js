@@ -11,8 +11,7 @@ function App() {
     <React.Fragment>
       
       <Nav/>
-      
-        
+      <Movies/>
       <Footer />
   
     </React.Fragment>
