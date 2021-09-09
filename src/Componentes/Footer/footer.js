@@ -1,14 +1,17 @@
 import React from 'react';
 import './footer.css';
 
+//sin estado
 function Footer () {
     return (
         <React.Fragment>
-            <ul>
-                <li>Iara Burgueño</li>
-                <li>Tiziana Maddalena</li>
-                <li>Rosario Rodriguez Montenegro</li>
-            </ul>
+           <footer>
+                <ul className="team">
+                    <li>Iara Burgueño</li>
+                    <li>Tiziana Maddalena</li>
+                    <li>Rosario Rodriguez Montenegro</li>
+                </ul>
+            </footer> 
         </React.Fragment>
 
     );
