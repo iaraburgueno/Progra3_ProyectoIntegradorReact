@@ -1,7 +1,8 @@
 import React from 'react';
 import Nav from './Componentes/Nav/Nav';
 import Footer from './Componentes/Footer/Footer';
-import Tarjetas from './Componentes/Tarjetas/Tarjetas';
+import Movies from './Componentes/Movies/Movies';
+import CardMovies from './Componentes/CardMovies/CardMovies';
 
 
 import './App.css';
@@ -24,7 +25,7 @@ function App() {
       </header>
 
       <div>
-        <Tarjetas />
+        <Movies/>
       </div>
       
       <footer>

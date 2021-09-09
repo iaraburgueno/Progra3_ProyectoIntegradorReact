@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import './tarjetas.css';
 
-class Tarjetas extends Component {
+class Movies extends Component {
     constructor(){ // se setean los estados 
         super();
         this.state = { // declaracion del estado inicial de esas propiedades que queremos trabajar de nuestros componentes. ES UN OBJ LITERAL.
@@ -36,4 +35,4 @@ class Tarjetas extends Component {
     }
 }
 
-export default Tarjetas;
+export default Movies;
