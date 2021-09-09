@@ -1,21 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './footer.css';
 
-class Footer extends Component {
-    render() {
-        return(
-            <div>
-
-            <ul class="team">
+function Footer () {
+    return (
+        <React.Fragment>
+            <ul>
                 <li>Iara Burgueño</li>
-                <li>Rosario Rodriguez Montenegro</li>
                 <li>Tiziana Maddalena</li>
+                <li>Rosario Rodriguez Montenegro</li>
             </ul>
+        </React.Fragment>
 
-            </div>
-        )
-    }
-    
+    );
 }
 
 export default Footer;
