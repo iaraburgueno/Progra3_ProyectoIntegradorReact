@@ -12,8 +12,9 @@ class Nav extends Component {
          return(
              <React.Fragment>
                  <header className='header'>
-                    <h1>Título/ Nombre de la app</h1>
-                        
+                    <i id="logo" className="fas fa-film"></i>
+                    <h1 id="titulo">good movies</h1>
+                    <i id="usuario" className="fas fa-user"></i>    
                 </header>
              </React.Fragment>
          )

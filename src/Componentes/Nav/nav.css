@@ -1,11 +1,27 @@
 .header{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
     font-family: 'Bebas Neue';
     text-transform: uppercase;
+    background-color: #0d253f;
+    color: white;
 }
 
 .buscador {
     display: flex;
+}
+
+#logo {
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+#titulo {
+    font-size: 50px;
+}
+
+#usuario {
+    font-size: 20px;
 }
