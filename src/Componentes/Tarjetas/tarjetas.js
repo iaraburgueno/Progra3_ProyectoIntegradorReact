@@ -30,7 +30,7 @@ class Tarjetas extends Component {
         //console.log("Rendericé");
         return(
             <React.Fragment>
-                HOLA
+            
             </React.Fragment>
         )
     }
