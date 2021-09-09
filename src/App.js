@@ -4,6 +4,7 @@ import Footer from './Componentes/Footer/Footer';
 import Movies from './Componentes/Movies/Movies';
 import CardMovies from './Componentes/CardMovies/CardMovies';
 import reactDom from 'react-dom';
+import Buscador from './Componentes/Buscador/Buscador'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <React.Fragment>
       
       <Nav/>
+      <Buscador/>
       <Movies/>
       <Footer />
   
