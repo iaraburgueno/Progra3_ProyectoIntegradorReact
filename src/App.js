@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from './Componentes/Nav/Nav';
-import Footer from './Componentes/Footer/Footer';
+import Footer from './Componentes/Footer/footer';
 import Movies from './Componentes/Movies/Movies';
 import CardMovies from './Componentes/CardMovies/CardMovies';
 
