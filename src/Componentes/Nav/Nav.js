@@ -3,7 +3,6 @@ import './nav.css';
 
 class Nav extends Component {
    
-
 }
 
 export default Nav;

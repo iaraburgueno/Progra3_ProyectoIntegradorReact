@@ -2,16 +2,16 @@ import React, {Component} from 'react';
 import './tarjetas.css';
 
 class Tarjetas extends Component {
-    constructor(){
+    constructor(){ // se setean los estados 
         super();
-        this.state = {
+        this.state = { // declaracion del estado inicial de esas propiedades que queremos trabajar de nuestros componentes. ES UN OBJ LITERAL.
             foto: '',
             titulo: '',
             descripcion: '',
             extra: [],
         }
     }
-    componentDidMount(){
+    componentDidMount(){ // Metodo en donde puedo hacer mi fetch
         console.log("Cargado!");
         let url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=1';
 
@@ -21,9 +21,7 @@ class Tarjetas extends Component {
             })    
             .then((data) => {
                 console.log(data);
-                this.setState({
-                   
-                })
+            
             })
             .catch(error => console.log(error))
     }
@@ -32,7 +30,7 @@ class Tarjetas extends Component {
         //console.log("Rendericé");
         return(
             <React.Fragment>
-                
+                HOLA
             </React.Fragment>
         )
     }

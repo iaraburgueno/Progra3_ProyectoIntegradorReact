@@ -21,13 +21,15 @@ function App() {
                 <button type="submit"><i class="fas fa-search"></i></button>
             </form>
         </section>
-    </header>
-   
-    
+      </header>
 
-    <footer>
+      <div>
+        <Tarjetas />
+      </div>
+      
+      <footer>
         <Footer />
-    </footer>
+      </footer>
 
     </div>
   );
