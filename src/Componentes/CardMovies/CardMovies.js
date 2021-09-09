@@ -11,8 +11,8 @@ class CardMovies extends Component {
 
     render(){
         return (
-    <main>
-       
+    <div className='contenedor'>
+     <main>
         <section className="card-container">
             <article>
                 <section className="navigation">
@@ -33,10 +33,11 @@ class CardMovies extends Component {
                         <p>Lenguaje original: {this.props.pelicula.original_language}</p>
                         <p>Fecha de lanzamiento: {this.props.pelicula.release_date}</p>
                     </section>
-                </main>
-            </article>
-        </section> 
-    </main>
+                 </main>
+             </article>
+            </section> 
+        </main>
+    </div>
         )
     }
    
