@@ -30,15 +30,8 @@ class Movies extends Component {
         //console.log("Rendericé");
         return(
             <React.Fragment>
-                <section className='buscador'>
-                            <p>Ordenar ASC/ DESC</p>
-                            <i className="fas fa-th"></i>
-                            <i className="fas fa-align-justify"></i>
-                            <form action="">
-                                <input type="text" name="search" id="" placeholder="Search"></input>
-                                <button type="submit"><i class="fas fa-search"></i></button>
-                            </form>
-                        </section>
+                
+                 <button type="button">Cargar más tarjetas</button>
                 {
                     this.state.peliculas.map(pelicula => <CardMovies key={pelicula.id} pelicula={pelicula}/>)
                 }

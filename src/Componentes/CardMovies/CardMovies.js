@@ -12,7 +12,7 @@ class CardMovies extends Component {
     render(){
         return (
     <main>
-        <button type="button">Cargar más tarjetas</button>
+       
         <section class="card-container">
             <article>
                 <section class="navigation">
