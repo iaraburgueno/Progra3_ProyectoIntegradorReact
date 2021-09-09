@@ -37,7 +37,7 @@ class Movies extends Component {
         return(
             <React.Fragment>
                 {
-                    this.state.extra.map()
+                    
                 }
             </React.Fragment>
         )
