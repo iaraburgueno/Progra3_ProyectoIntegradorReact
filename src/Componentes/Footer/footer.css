@@ -1,0 +1,9 @@
+.team{
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0d253f;
+    list-style: none;
+    color: white;
+}
