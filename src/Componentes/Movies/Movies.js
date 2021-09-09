@@ -25,6 +25,20 @@ class Movies extends Component {
             })
             .catch(error => console.log(error))
     }
+    
+    // // Metodo (masInfo())
+    // masInfo(){
+    //     let url = this.state.
+    //     fetch(url)
+    //     .then(respuesta =>{
+    //         return respuesta.json()
+    //     })
+    //     .then((data) =>{
+    //         this.setState({
+                 
+    //         })
+    //     })
+    // }
    
     render(){
         //console.log("Rendericé");
@@ -32,9 +46,17 @@ class Movies extends Component {
             <React.Fragment>
                 
                  <button type="button">Cargar más tarjetas</button>
-                {
-                    this.state.peliculas.map(pelicula => <CardMovies key={pelicula.id} pelicula={pelicula}/>)
-                }
+            
+                  <div className="row card-container">                
+                    { 
+                        //Con este if ternario controlo por si tarda la carga de datos me aparezca un mensaje que dice cargando aplicación
+                        this.state.peliculas.length === 0 ?
+                        <p>Cargando aplicación...</p> :
+                        this.state.peliculas.map(pelicula => <CardMovies key={pelicula.id} pelicula={pelicula}/>)
+                        //Aqui debemos pasarle el método (borrarTarjeta) al hijo
+                    }
+                </div>
+
             </React.Fragment>
         )
     }

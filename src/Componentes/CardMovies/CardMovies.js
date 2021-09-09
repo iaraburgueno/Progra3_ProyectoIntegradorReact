@@ -23,15 +23,16 @@ class CardMovies extends Component {
                     <i class="far fa-window-close"></i>
                 </section>
                 <main>
-                    <img src="./img/image-default.png" alt=""/>
+                    <img alt='20' src={`https://image.tmdb.org/t/p/w500/${this.props.pelicula.backdrop_path}`} />
                     <h3>{this.props.pelicula.title}</h3>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
+                    <p class="description">{this.props.pelicula.overview}</p>
+                    
+                    <button onClick= {() => this.masInfo() } >Ver más</button> 
                     <section class="aditional-info">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                        <p>Puntaje: {this.props.pelicula.vote_average}</p>
+                        <p>Lenguaje original: {this.props.pelicula.original_language}</p>
+                        <p>Fecha de lanzamiento: {this.props.pelicula.release_date}</p>
                     </section>
-                    <a href="">Ver más</a>
                 </main>
             </article>
            </section> 
