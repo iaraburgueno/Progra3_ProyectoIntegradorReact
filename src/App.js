@@ -3,20 +3,19 @@ import Nav from './Componentes/Nav/Nav';
 import Footer from './Componentes/Footer/Footer';
 import Movies from './Componentes/Movies/Movies';
 import CardMovies from './Componentes/CardMovies/CardMovies';
+import reactDom from 'react-dom';
 
-
-import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
 
       <header>
         <h1>Título/ Nombre de la app</h1>
         <section>
             <p>Ordenar ASC/ DESC</p>
-            <i class="fas fa-th"></i>
-            <i class="fas fa-align-justify"></i>
+            <i className="fas fa-th"></i>
+            <i className="fas fa-align-justify"></i>
             <form action="">
                 <input type="text" name="search" id="" placeholder="Search"></input>
                 <button type="submit"><i class="fas fa-search"></i></button>
@@ -32,7 +31,7 @@ function App() {
         <Footer />
       </footer>
 
-    </div>
+    </React.Fragment>
   );
 }
 
