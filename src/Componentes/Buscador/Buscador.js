@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Buscador.css';
 
 class Buscador extends Component {
 
@@ -8,7 +9,6 @@ render() {
     return (
         <React.Fragment>
             <section className='buscador'>
-                            <p>Ordenar ASC/ DESC</p>
                             <i className="fas fa-th"></i>
                             <i className="fas fa-align-justify"></i>
                             <form action="">
