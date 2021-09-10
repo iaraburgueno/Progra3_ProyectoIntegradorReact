@@ -9,12 +9,13 @@ render() {
     return (
         <React.Fragment>
             <section className='buscador'>
-                            <i className="fas fa-th"></i>
-                            <i className="fas fa-align-justify"></i>
-                            <form action="">
-                                <input type="text" name="search" id="" placeholder="Search"></input>
-                                <button type="submit"><i class="fas fa-search"></i></button>
-                            </form>
+                
+                <div> 
+                    <form action="">
+                        <input type="text" name="search" id="" placeholder="Search"></input>
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
                 </section>
         </React.Fragment>
     )

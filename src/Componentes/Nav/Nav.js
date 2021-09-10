@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './nav.css';
+import Buscador from '../Buscador/Buscador';
 
 class Nav extends Component {
      constructor(){
@@ -12,9 +13,14 @@ class Nav extends Component {
          return(
              <React.Fragment>
                  <header className='header'>
-                    <i id="logo" className="fas fa-film"></i>
-                    <h1 id="titulo">good movies</h1>
-                    <i id="usuario" className="fas fa-user"></i>    
+                    <div className="good">
+                        <i id="logo" className="fas fa-film"></i>
+                        <h1 id="titulo">good movies</h1>
+                        <i id="usuario" className="fas fa-user"></i>
+                    </div>    
+                    <div>
+                    <Buscador/>
+                    </div>
                 </header>
              </React.Fragment>
          )

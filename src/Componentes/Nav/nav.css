@@ -1,12 +1,17 @@
 .header{
     display: flex;
-    justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    justify-content: space-around; 
+    background-color: #0d253f;
+    align-items: center;
+    height: 100px;
+}
+
+.good{
+    display: flex;
     font-family: 'Bebas Neue';
     text-transform: uppercase;
-    background-color: #0d253f;
     color: white;
+    text-align: center;
 }
 
 .buscador {

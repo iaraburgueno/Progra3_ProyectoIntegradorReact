@@ -1,6 +1,29 @@
-.buscador {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0px;
- 
+.buscador form, i {
+    margin-left: 10px;
+
 }
+
+.buscador {
+    align-items: center;
+}
+
+form input {
+    color:mediumvioletred;
+    font-family: 'Sora';
+    font-size: 13.5px;
+}
+
+.buscador i {
+    font-size: 20px;
+}
+
+
+
+form button {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+
+

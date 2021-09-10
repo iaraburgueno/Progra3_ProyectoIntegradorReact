@@ -12,7 +12,6 @@ function App() {
     <React.Fragment>
       
       <Nav/>
-      <Buscador/>
       <Movies/>
       <Footer />
   

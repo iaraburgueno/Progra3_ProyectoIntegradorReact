@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import CardMovies from '../CardMovies/CardMovies';
+import './Movies.css'
 
 class Movies extends Component {
     constructor(){ // se setean los estados 
@@ -44,8 +45,12 @@ class Movies extends Component {
         //console.log("Rendericé");
         return(
             <React.Fragment>
-                
-                 <button type="button">Cargar más tarjetas</button>
+                <div className="opciones">
+                    <button type="button">Cargar más tarjetas</button>
+                    <br></br>
+                    <i className="fas fa-th"></i>
+                    <i className="fas fa-align-justify"></i>
+                </div>
             
                   <div className="row card-container">                
                     { 

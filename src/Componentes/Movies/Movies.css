@@ -1,0 +1,29 @@
+.opciones i:hover {
+    color:mediumvioletred;
+}
+
+.opciones {
+    margin:10px;
+    text-align: right;
+}
+
+.opciones i {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+
+.opciones button {
+    cursor: pointer;
+    background-color:mediumvioletred;
+    color: white;
+    border: none;
+    font-size: 13px;
+}
+
+.opciones button:hover {
+    color: mediumvioletred;
+    border: none;
+    background-color: transparent;
+}
