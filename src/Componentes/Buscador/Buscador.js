@@ -16,6 +16,7 @@ render() {
                         <button type="submit"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
+                <i id="usuario" className="fas fa-user"></i>
                 </section>
         </React.Fragment>
     )

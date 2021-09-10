@@ -16,7 +16,6 @@ class Nav extends Component {
                     <div className="good">
                         <i id="logo" className="fas fa-film"></i>
                         <h1 id="titulo">good movies</h1>
-                        <i id="usuario" className="fas fa-user"></i>
                     </div>    
                     <div>
                     <Buscador/>

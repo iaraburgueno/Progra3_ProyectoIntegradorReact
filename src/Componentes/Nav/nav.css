@@ -4,6 +4,7 @@
     background-color: #0d253f;
     align-items: center;
     height: 100px;
+    
 }
 
 .good{
@@ -27,6 +28,3 @@
     font-size: 50px;
 }
 
-#usuario {
-    font-size: 20px;
-}

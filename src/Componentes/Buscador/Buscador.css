@@ -4,7 +4,8 @@
 }
 
 .buscador {
-    align-items: center;
+    position: absolute;
+    
 }
 
 form input {
@@ -25,5 +26,8 @@ form button {
     color: white;
 }
 
+#usuario{
+    color: white;
+}
 
 
