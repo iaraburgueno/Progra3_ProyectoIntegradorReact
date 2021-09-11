@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import CardMovies from '../CardMovies/CardMovies';
+import Buscador from '../Buscador/Buscador';
 import './Movies.css'
 
 class Movies extends Component {
@@ -40,11 +41,25 @@ class Movies extends Component {
     //         })
     //     })
     // }
+
+    //Metodo para buscar peliculas 
+    buscarPelicula(tituloPelicula){
+        let peliculaBuscada = this.state.peliculas.filter(pelicula =>{
+            return pelicula.title.toLowerCase().includes(tituloPelicula.toLowerCase()) // el metodo toLowerCase() agarra el texto en la api y lo pasa a minuscula y el metodo includes() retorna un valor booleano para saber si el valor que ingresa el usuario existe o no
+        }) 
+        this.setState({
+            peliculas : peliculaBuscada
+        })
+
+    }
    
     render(){
         //console.log("Rendericé");
         return(
             <React.Fragment>
+                <div>
+                    <Buscador buscarPelicula = { (texto) => this.buscarPelicula(texto)} />
+                </div>
                 <div className="opciones">
                     <button type="button">Cargar más tarjetas</button>
                     <br></br>

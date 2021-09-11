@@ -2,15 +2,22 @@ import React, {Component} from 'react';
 import './Buscador.css';
 
 class Buscador extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state={
-            buscar : ''
+            buscarTitulo : ''
         }
     }
 
-    evitarBuscar(buscar){
-        buscar.preventDefault()
+    evitarBuscar(evento){ //metodo que evita que el buscador se submitee
+        evento.preventDefault()
+    }
+
+    controlarBuscador(evento) { //metodo que me captura lo que es ingresado en el form
+        this.setState({
+            buscarTitulo: evento.target.value
+        }, () => this.props.buscarPelicula(this.state.buscarTitulo))
+
     }
 
 render() {
@@ -19,8 +26,9 @@ render() {
             <section className='buscador'>
                 
                 <div> 
-                    <form onSubmit = {(buscar) => this.evitarBuscar(buscar)}>
-                        <input type="text" name="nombre" id="" placeholder="Search"></input>
+                    <form onSubmit = {(e) => this.evitarBuscar(e)}>
+                        <input type="text" name="titulo" id="titulo" placeholder="Search" onChange={(e) => this.controlarBuscador(e)} 
+                        value={this.state.buscarTitulo}></input>
                         <button type="submit"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
