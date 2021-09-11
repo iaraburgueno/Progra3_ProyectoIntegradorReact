@@ -17,9 +17,7 @@ class Nav extends Component {
                         <i id="logo" className="fas fa-film"></i>
                         <h1 id="titulo">good movies</h1>
                     </div>    
-                    <div>
-                    <Buscador/>
-                    </div>
+
                 </header>
              </React.Fragment>
          )
