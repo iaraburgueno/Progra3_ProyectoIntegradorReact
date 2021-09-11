@@ -7,7 +7,8 @@ class Movies extends Component {
     constructor(){ // se setean los estados 
         super();
         this.state = { // declaracion del estado inicial de esas propiedades que queremos trabajar de nuestros componentes. ES UN OBJ LITERAL.
-            peliculas: []
+            peliculas: [],
+            peliculasIniciales: [],
         }
     }
     componentDidMount(){ // Metodo en donde puedo hacer mi fetch
@@ -21,7 +22,8 @@ class Movies extends Component {
             .then((data) => {
                 console.log(data);
                 this.setState({
-                    peliculas: data.results
+                    peliculas: data.results,
+                    peliculasIniciales: data.results,
                 })
             
             })
@@ -44,7 +46,7 @@ class Movies extends Component {
 
     //Metodo para buscar peliculas 
     buscarPelicula(tituloPelicula){
-        let peliculaBuscada = this.state.peliculas.filter(pelicula =>{
+        let peliculaBuscada = this.state.peliculasIniciales.filter(pelicula =>{
             return pelicula.title.toLowerCase().includes(tituloPelicula.toLowerCase()) // el metodo toLowerCase() agarra el texto en la api y lo pasa a minuscula y el metodo includes() retorna un valor booleano para saber si el valor que ingresa el usuario existe o no
         }) 
         this.setState({
