@@ -73,7 +73,7 @@ class Movies extends Component {
                     { 
                         //Con este if ternario controlo por si tarda la carga de datos me aparezca un mensaje que dice cargando aplicación
                         this.state.peliculas.length === 0 ?
-                        <p>Cargando aplicación...</p> :
+                        <p>No se encuentran resultados</p> :
                         this.state.peliculas.map(pelicula => <CardMovies key={pelicula.id} pelicula={pelicula}/>)
                         //Aqui debemos pasarle el método (borrarTarjeta) al hijo
                     }
