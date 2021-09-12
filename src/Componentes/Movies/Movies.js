@@ -54,6 +54,19 @@ class Movies extends Component {
         })
 
     }
+
+    //Metodo para borrar peliculas 
+    borrarPelicula(id){
+        // filter metodo para poder recorrer el array de peliculas y que cumpla la condicion que buscamos
+        let nuevoArrayPeliculas = this.state.peliculas.filter(pelicula =>{
+            return pelicula.id != id
+        })
+        this.setState({ //actualizo estado de personakes a nuevoArrayPersonajes
+            peliculas : nuevoArrayPeliculas
+
+        })
+
+    }
    
     render(){
         //console.log("Rendericé");
@@ -74,8 +87,10 @@ class Movies extends Component {
                         //Con este if ternario controlo por si tarda la carga de datos me aparezca un mensaje que dice cargando aplicación
                         this.state.peliculas.length === 0 ?
                         <p>No se encuentran resultados</p> :
-                        this.state.peliculas.map(pelicula => <CardMovies key={pelicula.id} pelicula={pelicula}/>)
-                        //Aqui debemos pasarle el método (borrarTarjeta) al hijo
+                        this.state.peliculas.map(pelicula => <CardMovies key={pelicula.id} pelicula={pelicula}
+                        borrar = {(idEliminar) => this.borrarPelicula(idEliminar)} // le estoy pasando al componente hijo le estoy pasando un metodo para elimiar una pelicula
+                        />)
+                        
                     }
                 </div>
 
