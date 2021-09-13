@@ -75,6 +75,7 @@ class Movies extends Component {
                 <div>
                     <Buscador buscarPelicula = { (texto) => this.buscarPelicula(texto)} />
                 </div>
+
                 <div className="opciones">
                     <button type="button">Cargar más tarjetas</button>
                     <br></br>
@@ -82,17 +83,20 @@ class Movies extends Component {
                     <i className="fas fa-align-justify"></i>
                 </div>
             
-                  <div className="row card-container">                
+                <div className="row card-container">                
                     { 
-                        //Con este if ternario controlo por si tarda la carga de datos me aparezca un mensaje que dice cargando aplicación
+                        //Con este if ternario aviso si la busqueda realizada no tiene resultados
                         this.state.peliculas.length === 0 ?
-                        <p>No se encuentran resultados</p> :
+                        <p>No se encuentran resultados...</p> :
                         this.state.peliculas.map(pelicula => <CardMovies key={pelicula.id} pelicula={pelicula}
                         borrar = {(idEliminar) => this.borrarPelicula(idEliminar)} // le estoy pasando al componente hijo le estoy pasando un metodo para elimiar una pelicula
                         />)
                         
                     }
                 </div>
+
+                <button type="button">Cargar más peliculas</button>
+
 
             </React.Fragment>
         )
