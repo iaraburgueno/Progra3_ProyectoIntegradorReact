@@ -9,6 +9,7 @@ class Movies extends Component {
         this.state = { // declaracion del estado inicial de esas propiedades que queremos trabajar de nuestros componentes. ES UN OBJ LITERAL.
             peliculas: [],
             peliculasIniciales: [],
+            nextUrl : '',
         }
     }
     componentDidMount(){ // Metodo en donde puedo hacer mi fetch
@@ -24,6 +25,7 @@ class Movies extends Component {
                 this.setState({
                     peliculas: data.results,
                     peliculasIniciales: data.results,
+                    nextUrl : ''
                 })
             
             })
@@ -65,6 +67,22 @@ class Movies extends Component {
             peliculas : nuevoArrayPeliculas
 
         })
+    }
+
+    //Metodo para agregar mas peliculas
+    masPeliculas(){
+        let urlMasPeliculas = 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=2'
+        fetch(urlMasPeliculas)
+        .then (respuesta => {
+            return respuesta.json
+        })
+        .then((data) => {
+            this.setState ({ // conformo el obj literal 
+                personajes : this.state.peliculas.concat(data.results), 
+                nextUrl : data.results,
+            })
+        })
+
 
     }
    
@@ -77,8 +95,6 @@ class Movies extends Component {
                 </div>
 
                 <div className="opciones">
-                    <button type="button">Cargar más tarjetas</button>
-                    <br></br>
                     <i className="fas fa-th"></i>
                     <i className="fas fa-align-justify"></i>
                 </div>
@@ -95,7 +111,7 @@ class Movies extends Component {
                     }
                 </div>
 
-                <button type="button">Cargar más peliculas</button>
+                <button type="button" onClick= {() => this.masPeliculas()}>Cargar más peliculas</button>
 
 
             </React.Fragment>
