@@ -18,6 +18,7 @@ ul.team{
 .nombre{
     margin-left: 5px;
     margin-right: 20px;
+    font-size: 10px;
 }
 
 img.logoDB {
@@ -35,3 +36,17 @@ a:hover {
 }
 
 
+  /* CSS PARA TABLET  */
+  @media (min-width: 768px) {
+    .nombre{
+        font-size: 12px;
+    }
+    
+}
+/* CSS PARA LAPTOP  */
+@media (min-width: 992px) {
+    .nombre{
+        font-size: 15px;
+    }
+  
+}

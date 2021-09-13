@@ -34,3 +34,15 @@ form button {
     font-size: 15px;
     margin-top: 12px;
 }
+
+
+  /* CSS PARA TABLET  */
+  @media (min-width: 768px) {
+    
+    
+}
+/* CSS PARA LAPTOP  */
+@media (min-width: 992px) {
+  
+  
+}
