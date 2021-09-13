@@ -37,17 +37,17 @@ button {
     color: white;
 }
 
-/* CSS PARA TABLET  */
-@media only screen and (max-width: 768px) {
-    body {
-      background-color: lightblue;
-    }
+
+
+
+
+  /* CSS PARA TABLET  */
+@media (min-width: 768px) {
+    
     
   }
-
-/* CSS PARA MOBILE */
-@media only screen and (max-width: 425px) {
-    body {
-      background-color:mediumvioletred ;
-    }
+  /* CSS PARA LAPTOP  */
+@media (min-width: 992px) {
+    
+    
   }
