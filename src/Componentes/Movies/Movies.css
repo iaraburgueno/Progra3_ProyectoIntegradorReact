@@ -36,3 +36,18 @@ button {
     border: none;
     color: white;
 }
+
+/* CSS PARA TABLET  */
+@media only screen and (max-width: 768px) {
+    body {
+      background-color: lightblue;
+    }
+    
+  }
+
+/* CSS PARA MOBILE */
+@media only screen and (max-width: 425px) {
+    body {
+      background-color:mediumvioletred ;
+    }
+  }
