@@ -5,7 +5,22 @@ class CardMovies extends Component {
     constructor(props){
         super(props)
         this.state = {
-           
+           viewMore: false,
+           text: 'Ver más'
+        }
+    }
+
+    viewMore(){
+        if(this.state.viewMore){
+            this.setState({
+                viewMore: false,
+                text: 'Ver más'
+            })
+        } else {
+            this.setState({
+                viewMore: true,
+                text: 'Ver menos'
+            })            
         }
     }
 
@@ -16,7 +31,8 @@ class CardMovies extends Component {
                         <img alt='20' src={`https://image.tmdb.org/t/p/w500/${this.props.pelicula.backdrop_path}`} />
                         <h3 className ='titulo'>{this.props.pelicula.title}</h3>
                         <p className="descripcion">{this.props.pelicula.overview}</p>
-                        <button onClick= {() => this.masInfo() } className='mas' >Ver más</button>
+                        <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>Fecha de estreno: {this.props.pelicula.release_date}</p>
+                        <p onClick={()=>this.viewMore()}>{this.state.text}</p> 
                         <button onClick = { () => this.props.borrar(this.props.pelicula.id)}> Borrar </button>
                 </div>
          </React.Fragment>

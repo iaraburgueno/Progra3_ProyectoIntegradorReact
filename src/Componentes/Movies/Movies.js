@@ -32,19 +32,7 @@ class Movies extends Component {
             .catch(error => console.log(error))
     }
     
-    // // Metodo (masInfo())
-    // masInfo(){
-    //     let url = this.state.
-    //     fetch(url)
-    //     .then(respuesta =>{
-    //         return respuesta.json()
-    //     })
-    //     .then((data) =>{
-    //         this.setState({
-                 
-    //         })
-    //     })
-    // }
+   
 
     //Metodo para buscar peliculas 
     buscarPelicula(tituloPelicula){
