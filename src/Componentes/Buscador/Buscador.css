@@ -6,7 +6,9 @@ button i {
     color: #0d253f;
     font-size: 20px;
 }
-
+button i:hover {
+    color: mediumvioletred;
+}
 .buscador {
     position: absolute;
 }
