@@ -25,7 +25,7 @@ class Movies extends Component {
                 this.setState({
                     peliculas: data.results,
                     peliculasIniciales: data.results,
-                    nextUrl : ''
+                    nextUrl : 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=2'
                 })
             
             })
@@ -71,15 +71,15 @@ class Movies extends Component {
 
     //Metodo para agregar mas peliculas
     masPeliculas(){
-        let urlMasPeliculas = 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=2'
-        fetch(urlMasPeliculas)
+        let url = this.state.nextUrl
+        fetch(url)
         .then (respuesta => {
-            return respuesta.json
+            return respuesta.json()
         })
         .then((data) => {
             this.setState ({ // conformo el obj literal 
-                personajes : this.state.peliculas.concat(data.results), 
-                nextUrl : data.results,
+                peliculas : this.state.peliculas.concat(data.results), 
+                nextUrl : 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=2'
             })
         })
 
