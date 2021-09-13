@@ -33,21 +33,26 @@ body {
 .active{
 box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
 }
-.mas{
+
+.verMas{
     font-size: 12px;
     border: none;
     background-color: transparent;
     color: mediumvioletred;
     
 }
-.mas:hover {
+.verMas:hover {
     cursor: pointer;
-    background-color:mediumvioletred;
-    color: white;
 }
+
 .hide{
     display: none;
 }
 .show{
     display: block;
+}
+
+.extra {
+    font-size: 12px;
+    font-style: italic;
 }
