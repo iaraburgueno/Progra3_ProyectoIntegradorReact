@@ -27,9 +27,14 @@
   width: 100%;
 }
 
+.moviesRow .tarjetas .poster {
+  width: 30%;
+}
+
 .moviesRow .tarjetas .infoGeneral {
   margin-left: 5%;
   margin-right: 5%;
+  width: 70%;
 }
 
 .moviesCol {

@@ -28,7 +28,7 @@ class CardMovies extends Component {
          return (
          <React.Fragment>
                 <div className= 'tarjetas'>
-                    <div>
+                    <div className='poster'>
                         <img alt='20' src={`https://image.tmdb.org/t/p/w500/${this.props.pelicula.backdrop_path}`} />
                     </div>
                     <div className='infoGeneral'> 
