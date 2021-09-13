@@ -9,14 +9,14 @@ class Movies extends Component {
         this.state = { // declaracion del estado inicial de esas propiedades que queremos trabajar de nuestros componentes. ES UN OBJ LITERAL.
             peliculas: [],
             peliculasIniciales: [],
-            nextUrl : '',
+            url : 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=',
+            paginaActual : 1,
         }
     }
     componentDidMount(){ // Metodo en donde puedo hacer mi fetch
         console.log("Cargado!");
-        let url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=1';
 
-        fetch(url)
+        fetch(this.state.url+this.state.paginaActual)
             .then(respuesta => {
                 return respuesta.json()
             })    
@@ -25,7 +25,7 @@ class Movies extends Component {
                 this.setState({
                     peliculas: data.results,
                     peliculasIniciales: data.results,
-                    nextUrl : 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=2'
+                    paginaActual : this.state.paginaActual+1
                 })
             
             })
@@ -71,15 +71,15 @@ class Movies extends Component {
 
     //Metodo para agregar mas peliculas
     masPeliculas(){
-        let url = this.state.nextUrl
-        fetch(url)
+        fetch(this.state.url+this.state.paginaActual)
         .then (respuesta => {
             return respuesta.json()
         })
         .then((data) => {
             this.setState ({ // conformo el obj literal 
                 peliculas : this.state.peliculas.concat(data.results), 
-                nextUrl : 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=2'
+                peliculasIniciales : this.state.peliculasIniciales.concat(data.results), 
+                paginaActual : this.state.paginaActual+1
             })
         })
 
