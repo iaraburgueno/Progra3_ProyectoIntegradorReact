@@ -101,7 +101,7 @@ class Movies extends Component {
                     }
                 </div>
 
-                <button type="button" onClick= {() => this.masPeliculas()}>Cargar más peliculas</button>
+                <button className="masPelis" type="button" onClick= {() => this.masPeliculas()}>Cargar más peliculas</button>
 
 
             </React.Fragment>

@@ -65,6 +65,21 @@ button {
     color: white;
 }
 
+.masPelis{
+    margin-bottom: 12px;
+    font-size: 12px;
+    border: solid 1px #0d253f;
+    color: #0d253f;
+    background-color: transparent;
+}
+
+.masPelis:hover {
+  cursor: pointer;
+  border: solid 1px #0d253f;
+  color: white;
+  background-color: #0d253f;
+}
+
 
 
 
