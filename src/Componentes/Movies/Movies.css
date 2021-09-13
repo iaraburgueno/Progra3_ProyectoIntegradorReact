@@ -27,3 +27,12 @@
     border: none;
     background-color: transparent;
 }
+/* aca hay q hacer dos diferentes con clases para el de borrar y para el de cargar mas tarjetas */
+button { 
+    margin-bottom: 12px;
+    cursor: pointer;
+    background-color:mediumvioletred;
+    font-size: 12px;
+    border: none;
+    color: white;
+}

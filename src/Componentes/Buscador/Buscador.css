@@ -1,24 +1,24 @@
 .buscador form, i {
     margin-left: 10px;
-
 }
 
+button i {
+    color: #0d253f;
+    font-size: 20px;
+}
+button i:hover {
+    color: mediumvioletred;
+}
 .buscador {
     position: absolute;
-    
 }
 
 form input {
     color:mediumvioletred;
     font-family: 'Sora';
     font-size: 13.5px;
+    border-color: #0d253f;
 }
-
-.buscador i {
-    font-size: 20px;
-}
-
-
 
 form button {
     background-color: transparent;
@@ -30,4 +30,7 @@ form button {
     color: white;
 }
 
-
+#busqueda {
+    font-size: 15px;
+    margin-top: 12px;
+}
