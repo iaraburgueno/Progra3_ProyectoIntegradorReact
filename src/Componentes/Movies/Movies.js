@@ -11,25 +11,11 @@ class Movies extends Component {
             peliculasIniciales: [],
             url : 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=',
             paginaActual : 1,
+            cargando: true
         }
     }
     componentDidMount(){ // Metodo en donde puedo hacer mi fetch
-        console.log("Cargado!");
-
-        fetch(this.state.url+this.state.paginaActual)
-            .then(respuesta => {
-                return respuesta.json()
-            })    
-            .then((data) => {
-                console.log(data);
-                this.setState({
-                    peliculas: data.results,
-                    peliculasIniciales: data.results,
-                    paginaActual : this.state.paginaActual+1
-                })
-            
-            })
-            .catch(error => console.log(error))
+        this.masPeliculas()
     }
     
    
@@ -67,7 +53,8 @@ class Movies extends Component {
             this.setState ({ // conformo el obj literal 
                 peliculas : this.state.peliculas.concat(data.results), 
                 peliculasIniciales : this.state.peliculasIniciales.concat(data.results), 
-                paginaActual : this.state.paginaActual+1
+                paginaActual : this.state.paginaActual+1,
+                cargando: false
             })
         })
 
@@ -87,7 +74,14 @@ class Movies extends Component {
                     <i className="fas fa-align-justify"></i>
                 </div>
             
-                <div className="row card-container">                
+                <div className="row card-container">    
+                    {
+                        // Con este if ternario muestro cargando cuando la busqueda todavia no fue realizada
+                        this.state.cargando ? 
+                        <p> Cargando peliculas </p> :
+                        null
+
+                    }            
                     { 
                         //Con este if ternario aviso si la busqueda realizada no tiene resultados
                         this.state.peliculas.length === 0 ?
