@@ -11,7 +11,8 @@ class Movies extends Component {
             peliculasIniciales: [],
             url : 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=',
             paginaActual : 1,
-            cargando: true
+            cargando: true,
+            orientacion: 'moviesCol'
         }
     }
     componentDidMount(){ // Metodo en donde puedo hacer mi fetch
@@ -60,6 +61,13 @@ class Movies extends Component {
 
 
     }
+
+     //Metodo para cambiar orientación filas o columnas
+    cambiarOrientacion(orientacion){
+        this.setState({
+            orientacion: orientacion
+        })
+    }
    
     render(){
         //console.log("Rendericé");
@@ -70,11 +78,11 @@ class Movies extends Component {
                 </div>
 
                 <div className="opciones">
-                    <i className="fas fa-th"></i>
-                    <i className="fas fa-align-justify"></i>
+                    <i onClick={()=> this.cambiarOrientacion('moviesCol')} className="fas fa-th"></i>
+                    <i onClick={()=> this.cambiarOrientacion('moviesRow')}className="fas fa-align-justify"></i>
                 </div>
             
-                <div className="row card-container">    
+                <div className={`${this.state.orientacion}`}>    
                     {
                         // Con este if ternario muestro cargando cuando la busqueda todavia no fue realizada
                         this.state.cargando ? 

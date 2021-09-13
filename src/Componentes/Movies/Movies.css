@@ -12,7 +12,30 @@
     margin-top: 10px;
 }
 
+.moviesRow {
+  display: flex;
+  flex-direction: column;
+}
 
+.moviesRow .tarjetas {
+  width: 100%;
+  display: flex;
+}
+
+
+.moviesRow .tarjetas img {
+  width: 100%;
+}
+
+.moviesRow .tarjetas .infoGeneral {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.moviesCol {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .opciones button {
     cursor: pointer;
@@ -40,10 +63,11 @@ button {
 
 
 
-
-  /* CSS PARA TABLET  */
-@media (min-width: 768px) {
-    
+/* CSS PARA TABLET  */
+@media only screen and (max-width: 768px) {
+    body {
+      background-color: lightblue;
+    }
     
   }
   /* CSS PARA LAPTOP  */
