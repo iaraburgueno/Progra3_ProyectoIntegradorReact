@@ -42,6 +42,7 @@
   flex-wrap: wrap;
 }
 
+
 .opciones button {
     cursor: pointer;
     background-color:mediumvioletred;
@@ -88,10 +89,23 @@ button {
     body {
       background-color: lightblue;
     }
+    .moviesCol{
+      margin-left: 2%;
+    }
+    .moviesCol .tarjetas {
+      width: 32%;
+      justify-content: center;
+    }
+
     
   }
   /* CSS PARA LAPTOP  */
 @media (min-width: 992px) {
-    
+  .moviesCol {
+    margin-left: 1%;
+  }
+  body {
+    background-color: rgb(218, 243, 252);
+  }
     
   }

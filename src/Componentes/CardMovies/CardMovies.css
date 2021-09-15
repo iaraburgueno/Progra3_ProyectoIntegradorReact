@@ -52,3 +52,24 @@ box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
     font-size: 12px;
     font-style: italic;
 }
+
+
+/* CSS PARA TABLET  */
+@media only screen and (max-width: 768px) {
+    .descripcion {
+        font-size: 11px;
+        
+    }
+    
+    .titulo {
+        font-size: 14px;
+        
+    }
+    
+    
+  }
+  /* CSS PARA LAPTOP  */
+@media (min-width: 992px) {
+    
+    
+  }
