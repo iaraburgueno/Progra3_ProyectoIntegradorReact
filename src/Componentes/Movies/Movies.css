@@ -1,3 +1,4 @@
+
 .opciones i:hover {
     color:mediumvioletred;
 }
@@ -56,7 +57,7 @@
     border: none;
     background-color: transparent;
 }
-/* aca hay q hacer dos diferentes con clases para el de borrar y para el de cargar mas tarjetas */
+
 button { 
     margin-bottom: 12px;
     cursor: pointer;
@@ -85,7 +86,7 @@ button {
 
 
 /* CSS PARA TABLET  */
-@media only screen and (max-width: 768px) {
+@media  (max-width: 768px) {
     body {
       background-color: lightblue;
     }

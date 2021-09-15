@@ -29,7 +29,7 @@ render() {
                     <form onSubmit = {(e) => this.evitarBuscar(e)}>
                         <input type="text" name="titulo" id="busqueda" placeholder="Search" onChange={(e) => this.controlarBuscador(e)} 
                         value={this.state.buscarTitulo}></input>
-                        <button type="submit"><i class="fas fa-search"></i></button>
+                        <i className="fas fa-search"></i>
                     </form>
                 </div>
                 
