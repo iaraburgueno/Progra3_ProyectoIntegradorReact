@@ -87,10 +87,6 @@ class Movies extends Component {
                         // Con este if ternario muestro cargando cuando la busqueda todavia no fue realizada
                         this.state.cargando ? 
                         <p> Cargando peliculas </p> :
-                        null
-
-                    }            
-                    { 
                         //Con este if ternario aviso si la busqueda realizada no tiene resultados
                         this.state.peliculas.length === 0 ?
                         <p>No se encuentran resultados...</p> :
