@@ -3,6 +3,7 @@
     justify-content: space-between;
     background-color: #0d253f;
     margin-bottom: 0px;
+    width: 100%;
 }
 
 ul.team{
@@ -13,16 +14,16 @@ ul.team{
     list-style: none;
     color: white;
     margin: 0px;
+    width: 90%;
 }
 
 .nombre{
-    margin-left: 5px;
-    margin-right: 20px;
     font-size: 10px;
+    margin: 3%;
 }
 
 img.logoDB {
-    width: 150px;
+    width: 10%;
     margin-left: 20px;
 
 }
@@ -36,17 +37,21 @@ a:hover {
 }
 
 
-  /* CSS PARA TABLET  */
-  @media (min-width: 768px) {
+ /* CSS PARA TABLET  */
+@media (max-width: 768px) {
+    img.logoDB {
+        width: 15%;
+    
+    }
+}
+
+/* CSS PARA MOBILE */
+@media (max-width: 425px) {
     .nombre{
-        font-size: 12px;
+        font-size: 7px;
+    }
+    img.logoDB {
+        width: 20%;
     }
     
-}
-/* CSS PARA LAPTOP  */
-@media (min-width: 992px) {
-    .nombre{
-        font-size: 15px;
-    }
-  
-}
+    } 

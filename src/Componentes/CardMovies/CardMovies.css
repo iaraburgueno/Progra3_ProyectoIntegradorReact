@@ -15,11 +15,12 @@ body {
 .tarjetas{
     padding: 20px;
     margin-bottom: 20px;
-    width: 19%;
+    width: 18%;
     margin-right: 1%;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    margin-left: 1%;
 }
 .tarjetas img{
     width: 100%;
@@ -53,23 +54,31 @@ box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
     font-style: italic;
 }
 
-
 /* CSS PARA TABLET  */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .descripcion {
         font-size: 11px;
         
     }
-    
     .titulo {
         font-size: 14px;
+    }
+    .tarjetas{
+        width: 31%;
+        margin-left: 1%;
         
     }
-    
-    
+
   }
-  /* CSS PARA LAPTOP  */
-@media (min-width: 992px) {
-    
-    
-  }
+  
+
+/* CSS PARA MOBILE */
+@media (max-width: 425px) {
+    .tarjetas{
+        width: 46%;
+        margin-left: 2%;
+
+    }
+        
+    } 
+

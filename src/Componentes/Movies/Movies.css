@@ -44,6 +44,7 @@
 }
 
 
+
 .opciones button {
     cursor: pointer;
     background-color:mediumvioletred;
@@ -71,42 +72,37 @@ button {
     margin-bottom: 12px;
     font-size: 12px;
     border: solid 1px #0d253f;
-    color: #0d253f;
-    background-color: transparent;
+    color: white;
+    background-color: #0d253f;
+    margin-left: 1%;
 }
 
 .masPelis:hover {
   cursor: pointer;
-  border: solid 1px #0d253f;
-  color: white;
-  background-color: #0d253f;
+  
 }
-
-
+body {
+  background-color:rgb(201, 238, 250);
+}
 
 
 /* CSS PARA TABLET  */
 @media  (max-width: 768px) {
-    body {
-      background-color: lightblue;
-    }
-    .moviesCol{
-      margin-left: 2%;
-    }
-    .moviesCol .tarjetas {
-      width: 32%;
-      justify-content: center;
-    }
 
+  .moviesCol{
+    margin-left: 2%;
+  }
+  
+
+}
+
+/* CSS PARA MOBILE  */
+@media  (max-width: 425px) {
     
+   
   }
-  /* CSS PARA LAPTOP  */
-@media (min-width: 992px) {
-  .moviesCol {
-    margin-left: 1%;
-  }
-  body {
-    background-color: rgb(218, 243, 252);
-  }
-    
-  }
+
+
+
+ 
+  
