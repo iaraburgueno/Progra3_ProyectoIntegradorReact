@@ -48,6 +48,7 @@ class Movies extends Component {
     masPeliculas(){
         fetch(this.state.url+this.state.paginaActual)
         .then (respuesta => {
+            console.log()
             return respuesta.json()
         })
         .then((data) => {
@@ -70,7 +71,8 @@ class Movies extends Component {
     }
    
     render(){
-        //console.log("Rendericé");
+        console.log(this.state.peliculas)
+
         return(
             <React.Fragment>
                 <div>
@@ -90,7 +92,7 @@ class Movies extends Component {
                         //Con este if ternario aviso si la busqueda realizada no tiene resultados
                         this.state.peliculas.length === 0 ?
                         <p>No se encuentran resultados...</p> :
-                        this.state.peliculas.map(pelicula => <CardMovies key={pelicula.id} pelicula={pelicula}
+                        this.state.peliculas.map((pelicula, idx) => <CardMovies key={pelicula.id+"-"+idx} pelicula={pelicula}
                         borrar = {(idEliminar) => this.borrarPelicula(idEliminar)} // le estoy pasando al componente hijo le estoy pasando un metodo para elimiar una pelicula
                         />)
                         
