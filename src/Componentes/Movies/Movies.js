@@ -38,7 +38,7 @@ class Movies extends Component {
         let nuevoArrayPeliculas = this.state.peliculas.filter(pelicula =>{
             return pelicula.id != id
         })
-        this.setState({ //actualizo estado de personakes a nuevoArrayPersonajes
+        this.setState({ //actualizo estado de peliculas a nuevoArrayPersonajes
             peliculas : nuevoArrayPeliculas
 
         })
@@ -48,7 +48,6 @@ class Movies extends Component {
     masPeliculas(){
         fetch(this.state.url+this.state.paginaActual)
         .then (respuesta => {
-            console.log()
             return respuesta.json()
         })
         .then((data) => {
@@ -71,7 +70,6 @@ class Movies extends Component {
     }
    
     render(){
-        console.log(this.state.peliculas)
 
         return(
             <React.Fragment>
