@@ -6,7 +6,7 @@ import './Movies.css'
 class Movies extends Component {
     constructor(){ // se setean los estados 
         super();
-        this.state = { // declaracion del estado inicial de esas propiedades que queremos trabajar de nuestros componentes. ES UN OBJ LITERAL.
+        this.state = { // declaracion del estado inicial de esas propiedades que queremos trabajar de nuestros componentes.         ES UN OBJ LITERAL.
             peliculas: [],
             peliculasIniciales: [],
             url : 'https://api.themoviedb.org/3/movie/top_rated?api_key=67075a4c36f7b26dbc800dacf3003a96&language=en-US&page=',
@@ -19,7 +19,21 @@ class Movies extends Component {
         this.masPeliculas()
     }
     
-   
+   //Metodo para agregar mas peliculas
+   masPeliculas(){
+    fetch(this.state.url+this.state.paginaActual)
+    .then (respuesta => {
+        return respuesta.json()
+    })
+    .then((data) => {
+        this.setState ({ // conformo el obj literal 
+            peliculas : this.state.peliculas.concat(data.results), 
+            peliculasIniciales : this.state.peliculasIniciales.concat(data.results), 
+            paginaActual : this.state.paginaActual+1,
+            cargando: false
+        })
+    })
+    }   
 
     //Metodo para buscar peliculas 
     buscarPelicula(tituloPelicula){
@@ -44,23 +58,6 @@ class Movies extends Component {
         })
     }
 
-    //Metodo para agregar mas peliculas
-    masPeliculas(){
-        fetch(this.state.url+this.state.paginaActual)
-        .then (respuesta => {
-            return respuesta.json()
-        })
-        .then((data) => {
-            this.setState ({ // conformo el obj literal 
-                peliculas : this.state.peliculas.concat(data.results), 
-                peliculasIniciales : this.state.peliculasIniciales.concat(data.results), 
-                paginaActual : this.state.paginaActual+1,
-                cargando: false
-            })
-        })
-
-
-    }
 
      //Metodo para cambiar orientación filas o columnas
     cambiarOrientacion(orientacion){
